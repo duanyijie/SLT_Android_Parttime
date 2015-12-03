@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/title_Bar" >
+
+        <Button
+            android:id="@+id/back"
+            style="@style/padingstyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/com_navbar_btn_back_selector"
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/app_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/setting" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:background="@color/app_white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/clear_cache"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:drawablePadding="16.0dip"
+                    android:text="@string/clear_cache" />
+
+                <TextView
+                    android:id="@+id/totalCacheSize"
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dip"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/present"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/im"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/profile_fuction_icon_package" />
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_toRightOf="@+id/im"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:drawablePadding="16.0dip"
+                    android:text="@string/present" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@drawable/com_icon_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/function_introduce"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_toRightOf="@+id/im2"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/function_introduce" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@drawable/com_icon_arrow_right" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/baodian"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_toRightOf="@+id/im2"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/baodian" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@drawable/com_icon_arrow_right" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/check_update"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/check_update" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/user_feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/user_feedback" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@drawable/com_icon_arrow_right" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/about"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/about" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/remove_login"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/remove_login" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/exit"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/exit" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/change_password"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/change_password" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/changephone"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/com_function_icon_bg_selector"
+                android:onClick="onClick"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/btn_cardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@drawable/com_bg_transparent_bg"
+                    android:text="@string/changephone" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider"
+                android:layout_marginLeft="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
